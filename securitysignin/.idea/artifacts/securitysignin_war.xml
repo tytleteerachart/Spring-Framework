@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="securitysignin:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="securitysignin-1.0.0.war">
-      <element id="artifact" artifact-name="securitysignin:war exploded" />
-    </root>
-  </artifact>
-</component>
