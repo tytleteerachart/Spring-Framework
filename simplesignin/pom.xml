@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Project Info -->
+    <groupId>com.tytle.simplesignin</groupId>
+    <artifactId>simplesignin</artifactId>
+    <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <packaging>war</packaging>
+
+    <!-- Project Detail -->
+    <name>simple sign-in</name>
+    <description>Sign In using Spring Security with Java-based configuration</description>
+
+    <!-- Dependencies Versions -->
+    <properties>
+        <springframework.version>4.3.6.RELEASE</springframework.version>
+        <springsecurity.version>4.2.1.RELEASE</springsecurity.version>
+        <mysqlconnectorj.version>5.1.40</mysqlconnectorj.version>
+        <dbcp2.version>2.1.1</dbcp2.version>
+        <servlet.version>3.0.1</servlet.version>
+        <jsp.version>2.2</jsp.version>
+        <jstl.version>1.2</jstl.version>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- [SPRING FRAMEWORK START] -->
+        <!-- Context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- Core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- Web MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- JDBC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- [SPRING FRAMEWORK END] -->
+
+
+        <!-- [SPRING SECURITY START] -->
+        <!-- Core + Web -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <!-- Config -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <!-- [SPRING SECURITY END] -->
+
+
+        <!-- [UTILITY START] -->
+        <!-- Apache Commons DBCP2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${dbcp2.version}</version>
+        </dependency>
+        <!-- MySQL Connector J -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysqlconnectorj.version}</version>
+        </dependency>
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+        </dependency>
+        <!-- JSP -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp.version}</version>
+        </dependency>
+        <!-- JSTL -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+        <!-- [UTILITY END] -->
+    </dependencies>
+</project>
