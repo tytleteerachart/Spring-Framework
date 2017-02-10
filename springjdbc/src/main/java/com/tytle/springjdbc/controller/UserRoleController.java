@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.tytle.springjdbc.repository.UserRoleRepository;
+import com.tytle.springjdbc.service.UserRoleService;
 
 @Controller
 public class UserRoleController {
 
+    private final UserRoleService userRoleService;
+
     @Autowired
-    private UserRoleRepository userRoleRepository;
+    public UserRoleController(UserRoleService userRoleService) {
+        this.userRoleService = userRoleService;
+    }
 
     @GetMapping("/userrole")
     public ModelAndView getUserRole() {
@@ -24,13 +28,7 @@ public class UserRoleController {
 
     @PostMapping("/userrole")
     public ModelAndView postUserRole(HttpServletRequest httpServletRequest, RedirectAttributes redirectAttributes) {
-        try {
-            int role_id = Integer.parseInt(httpServletRequest.getParameter("role_id"));
-            redirectAttributes.addFlashAttribute("userRole", userRoleRepository.getUserRole(role_id));
-            System.out.println(userRoleRepository.getUserRole(role_id));
-        } catch (NumberFormatException ex) {
-            ex.printStackTrace();
-        }
+        redirectAttributes.addFlashAttribute("userRole", userRoleService.getUserRoleAttribute(httpServletRequest));
         return new ModelAndView("redirect:/userrole");
     }
 }
