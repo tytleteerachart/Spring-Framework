@@ -9,3 +9,7 @@
 * Java-based Configuration
 * Register MultipartConfigElement
 * Maximum allowed size for upload files
+
+#### 3. Simple Retrieving data from MySQL
+* Java-based Configuration
+* Apache Commons DBCP Connection Pool
