@@ -13,3 +13,9 @@
 #### 3. Simple Retrieving data from MySQL
 * Java-based Configuration
 * Apache Commons DBCP Connection Pool
+
+#### 4. Sign-in using MySQL Database
+* Java-based Configuration (MVC + Security)
+* Apache Commons DBCP Connection Pool
+* Using configureGlobal method to authenticate
+* Implementing UserDetailsService interface to authorize user's role
