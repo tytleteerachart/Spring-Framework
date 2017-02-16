@@ -5,5 +5,7 @@
     </head>
     <body>
         <h1>Status: ${message}</h1>
+        <a href="uploadfiles.jsp">Back</a>
+        <a href="viewfiles.jsp">View all files</a>
     </body>
 </html>
