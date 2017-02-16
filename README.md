@@ -1,21 +1,23 @@
-# Spring Framework Web Application Example
+# Spring Framework Web Application Example (Java-based Configuration)
 
 #### 1. Simple Sign-in web application with Spring Security
-* Java-based Configuration
+###### folder: simplesignin
 * In memory authentication by user's role
 * Preventing user to go back to sign-in page after a successful sign-in
 
-#### 2. Simple upload file web application
-* Java-based Configuration
+#### 2. Uploading and Downloading files web application
+###### folder: uploadingfiles
 * Register MultipartConfigElement
 * Maximum allowed size for upload files
+* Using Spring Framework's MultipartFile to upload files
 
-#### 3. Simple Retrieving data from MySQL
-* Java-based Configuration
+#### 3. Retrieving data from MySQL Database
+###### folder: springjdbc
 * Apache Commons DBCP Connection Pool
+* Using JdbcTemplate object that injected a repository for running SQL command 
 
 #### 4. Sign-in using MySQL Database
-* Java-based Configuration (MVC + Security)
+###### folder: signinjdbc
 * Apache Commons DBCP Connection Pool
-* Using configureGlobal method to authenticate
+* Using configureGlobal method to authenticate user
 * Implementing UserDetailsService interface to authorize user's role
